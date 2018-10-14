@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="inner cover">
-                    <h1 class="cover-heading">POS Module for Stock Manager Advance</h1>
+                    <h1 class="cover-heading">POS Module for Stock Manager Advancefvgeyhfbgk</h1>
                     <p class="lead">Stock Manager Advance is php based web application for small and medium business to manage inventory, sales (with online payments), expenses, customers and warehouses. </p>
                     <p>Please edit themes/<?=$Settings->theme;?>/views/promotions.php</p>
                 </div>
