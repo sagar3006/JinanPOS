@@ -128,12 +128,12 @@
                                                     </tr>
                                                     <?php } ?>
 
-                                                    <?php if (!$shop_settings->hide_price) { ?>
+                                                    <?php //if (!$shop_settings->hide_price) { ?>
                                                     <tr>
                                                         <td><?= lang("price"); ?></td>
                                                         <td><?= $this->sma->convertMoney($product->special_price ? $product->special_price : $product->price); ?></td>
                                                     </tr>
-                                                    <?php } ?>
+                                                    <?php //} ?>
 
                                                     <?php
                                                     if ($product->promotion) {

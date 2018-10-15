@@ -208,13 +208,13 @@
                                     </a>
                                 </li>
                             <?php } ?>
-                            <li class="divider"></li>
+                            <!-- <li class="divider"></li>
                             <li>
                                 <a href="<?= admin_url('welcome/toggle_rtl') ?>">
                                     <i class="fa fa-align-<?=$Settings->user_rtl ? 'right' : 'left';?>"></i>
                                     <?= lang('toggle_alignment') ?>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <?php /* if ($Owner && $Settings->update) { ?>
@@ -292,11 +292,11 @@
                         </a>
                     </li>
                     <?php } ?>
-                    <li class="dropdown hidden-xs">
+                    <!-- <li class="dropdown hidden-xs">
                         <a class="btn bred tip" title="<?= lang('clear_ls') ?>" data-placement="bottom" id="clearLS" href="#">
                             <i class="fa fa-eraser"></i>
                         </a>
-                    </li>
+                    </li> -->
                     <?php } ?>
                 </ul>
             </div>

@@ -73,7 +73,7 @@ $ps = array('0' => lang("disable"), '1' => lang("enable"));
     <div class="box-header">
         <h2 class="blue"><i class="fa-fw fa fa-cog"></i><?= lang('system_settings'); ?></h2>
 
-        <div class="box-icon">
+        <!-- <div class="box-icon">
             <ul class="btn-tasks">
                 <li class="dropdown"><a href="<?= admin_url('system_settings/paypal') ?>" class="toggle_up"><i
                             class="icon fa fa-paypal"></i><span
@@ -82,7 +82,7 @@ $ps = array('0' => lang("disable"), '1' => lang("enable"));
                             class="icon fa fa-bank"></i><span class="padding-right-10"><?= lang('skrill'); ?></span></a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div class="box-content">
         <div class="row">

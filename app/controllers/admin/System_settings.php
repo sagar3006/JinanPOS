@@ -205,7 +205,7 @@ class system_settings extends MY_Controller
         }
     }
 
-    function paypal()
+    /*function paypal()
     {
 
         $this->form_validation->set_rules('active', $this->lang->line('activate'), 'trim');
@@ -240,9 +240,9 @@ class system_settings extends MY_Controller
             $meta = array('page_title' => lang('paypal_settings'), 'bc' => $bc);
             $this->page_construct('settings/paypal', $meta, $this->data);
         }
-    }
+    }*/
 
-    function skrill()
+    /*function skrill()
     {
 
         $this->form_validation->set_rules('active', $this->lang->line('activate'), 'trim');
@@ -277,7 +277,7 @@ class system_settings extends MY_Controller
             $meta = array('page_title' => lang('skrill_settings'), 'bc' => $bc);
             $this->page_construct('settings/skrill', $meta, $this->data);
         }
-    }
+    }*/
 
     function change_logo()
     {
