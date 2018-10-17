@@ -32,13 +32,13 @@
             </div>
 
             <div class="clearfix visible-sm-block"></div>
-            <div class="col-md-3 col-sm-6">
+            <!-- <div class="col-md-3 col-sm-6">
                 <div class="title-footer"><span><?= lang('payment_methods'); ?></span></div>
                 <p><?= $shop_settings->payment_text; ?></p>
                 <img class="img-responsive" src="<?= $assets; ?>/images/payment-methods.png" alt="Payment Methods">
-            </div>
+            </div> -->
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-offset-3 col-md-3 col-sm-6">
                 <div class="title-footer"><span><?= lang('follow_us'); ?></span></div>
                 <p><?= $shop_settings->follow_text; ?></p>
                 <ul class="follow-us">
@@ -59,7 +59,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright line-height-lg">
-                &copy; <?= date('Y'); ?> <?= $shop_settings->shop_name; ?>. <?= lang('all_rights_reserved'); ?>
+                &copy; <?= date('Y'); ?> <a href="http://jinanitltd.com/" target="_blank">jinanitltd.com</a><!-- . <?= lang('all_rights_reserved'); ?> -->
             </div>
             <ul class="list-inline pull-right line-height-md">
                 <li class="padding-x-no text-size-lg">
