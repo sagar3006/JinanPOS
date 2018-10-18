@@ -17,7 +17,6 @@
 </head>
 
 <body class="login-page">
-    vfbhjbgvreibgire
     <noscript>
         <div class="global-site-notice noscript">
             <div class="notice-inner">
