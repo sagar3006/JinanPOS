@@ -7,7 +7,7 @@
     <script type="text/javascript">if (parent.frames.length !== 0) { top.location = '<?= site_url(); ?>'; }</script>
     <title><?= $page_title; ?></title>
     <meta name="description" content="<?= $page_desc; ?>">
-    <link rel="shortcut icon" href="<?= $assets; ?>images/icon.png">
+    <link rel="shortcut icon" href="<?= $assets; ?>images/favicon.png">
     <link href="<?= $assets; ?>css/libs.min.css" rel="stylesheet">
     <link href="<?= $assets; ?>css/styles.min.css" rel="stylesheet">
     <meta property="og:url" content="<?= isset($product) && !empty($product) ? site_url('product/'.$product->slug) : site_url(); ?>" />

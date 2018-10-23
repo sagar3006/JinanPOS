@@ -5,7 +5,7 @@
     <title><?= $title ?></title>
     <script type="text/javascript">if (parent.frames.length !== 0) { top.location = '<?=admin_url()?>'; }</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?= $assets ?>images/icon.png"/>
+    <link rel="shortcut icon" href="<?= $assets ?>images/favicon.png"/>
     <link href="<?= $assets ?>styles/theme.css" rel="stylesheet"/>
     <link href="<?= $assets ?>styles/style.css" rel="stylesheet"/>
     <link href="<?= $assets ?>styles/helpers/login.css" rel="stylesheet"/>
@@ -17,6 +17,35 @@
 </head>
 
 <body class="login-page">
+    <?php
+        /*$remote_db_config = array(
+            'dsn'   => '',
+            'hostname' => 'localhost',
+            'username' => 'jinanpos360_sgs',
+            'password' => 'Jinanit2018',
+            'database' => 'jinanpos360_sgs',
+            'dbdriver' => 'mysqli',
+            'dbprefix' => 'sma_',
+            'pconnect' => FALSE,
+            'db_debug' => FALSE,
+            'cache_on' => FALSE,
+            'cachedir' => '',
+            'char_set' => 'utf8',
+            'dbcollat' => 'utf8_general_ci',
+            'swap_pre' => '',
+            'encrypt' => FALSE,
+            'compress' => FALSE,
+            'stricton' => FALSE,
+            'failover' => array(),
+            'save_queries' => FALSE
+        );
+        $this->remote_DB = $this->load->database($remote_db_config, TRUE);
+
+        $users = $this->remote_DB->get('users')->result_array();
+        echo '<pre>';
+        print_r($users);*/
+    ?>
+
     <noscript>
         <div class="global-site-notice noscript">
             <div class="notice-inner">
