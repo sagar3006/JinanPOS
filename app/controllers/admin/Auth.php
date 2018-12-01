@@ -55,6 +55,7 @@ class Auth extends MY_Controller
             ->join('groups', 'users.group_id=groups.id', 'left')
             ->group_by('users.id')
             ->where('company_id', NULL)
+            ->where('users.id !=', 1)
             ->edit_column('active', '$1__$2', 'active, id')
             ->add_column("Actions", "<div class=\"text-center\"><a href='" . admin_url('auth/profile/$1') . "' class='tip' title='" . lang("edit_user") . "'><i class=\"fa fa-edit\"></i></a></div>", "id");
 

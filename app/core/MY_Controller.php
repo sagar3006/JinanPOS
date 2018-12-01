@@ -5,6 +5,11 @@ class MY_Controller extends CI_Controller {
     function __construct()
     {
         parent::__construct();
+
+        $shop_status = $this->db->get('subscription')->row()->shop_status;
+        if($shop_status == 0)
+            redirect('verify');
+        
         $this->Settings = $this->site->get_setting();
         if($sma_language = $this->input->cookie('sma_language', TRUE)) {
             $this->config->set_item('language', $sma_language);

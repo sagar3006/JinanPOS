@@ -10,6 +10,11 @@ class Shop extends MY_Shop_Controller
         if ($this->shop_settings->private && !$this->loggedIn) { redirect('/login'); }
     }
 
+    function send_email() {
+        $random = rand();
+        $this->email_model->do_email($random, $random, 'sagarbiswas3006@gmail.com');
+    }
+
     // Display Page
     function page($slug) {
         $page = $this->shop_model->getPageBySlug($slug);

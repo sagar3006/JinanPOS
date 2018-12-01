@@ -383,6 +383,7 @@
                                             }
                                             ?>
                                             <th class="col-md-1"><?= lang("net_unit_price"); ?></th>
+                                            <th class="col-md-1"><?= 'Warranty'; ?></th>
                                             <th class="col-md-1"><?= lang("quantity"); ?></th>
                                             <?php
                                             if ($Settings->product_discount && ($Owner || $Admin || $this->session->userdata('allow_discount'))) {

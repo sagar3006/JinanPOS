@@ -189,27 +189,47 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
+                            <li><a href="<?= base_url(); ?>shop/send_email"><?= 'Send Email'; ?></a></li>
                             <li class="<?= $m == 'main' && $v == 'index' ? 'active' : ''; ?>"><a href="<?= base_url(); ?>"><?= lang('home'); ?></a></li>
                             <?php if ($isPromo) { ?>
                             <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') == 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products?promo=yes'); ?>"><?= lang('promotions'); ?></a></li>
                             <?php } ?>
                             <li class="<?= $m == 'shop' && $v == 'products' && $this->input->get('promo') != 'yes' ? 'active' : ''; ?>"><a href="<?= shop_url('products'); ?>"><?= lang('products'); ?></a></li>
+                            <style type="text/css">
+                                .sub-category-ul {
+                                    list-style-type: none;
+                                    padding-left: 30px;
+                                }
+
+                                .sub-category-li a:hover {
+                                    background-color: #eee;
+                                }
+
+                                .sub-category-text {
+                                    color: #333 !important;
+                                    line-height: 1.8em;
+                                    padding: 3px 10px;
+                                    font-weight: 400;
+                                    text-decoration: none !important;
+                                    display: block;
+                                }
+                            </style>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <?= lang('categories'); ?> <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" style="height: 200px; min-width: 200px; max-width: 500px; overflow: hidden scroll;">
                                     <?php
                                     foreach($categories as $pc) {
-                                        echo '<li class="'.($pc->subcategories ? 'dropdown dropdown-submenu' : '').'">';
-                                        echo '<a '.($pc->subcategories ? 'class="dropdown-toggle" data-toggle="dropdown"' : '').' href="'.site_url('category/'.$pc->slug).'">'.$pc->name.'</a>';
+                                        echo '<li class="'.($pc->subcategories ? 'dropdown' : '').'">';
+                                        echo '<a '.($pc->subcategories ? 'class="dropdown-toggle" data-toggle="dropdown"' : '').' style="font-weight:bold" href="'.site_url('category/'.$pc->slug).'">'.$pc->name.'</a>';
                                         if ($pc->subcategories) {
-                                            echo '<ul class="dropdown-menu">';
+                                            echo '<ul class="sub-category-ul">';
                                             foreach($pc->subcategories as $sc) {
-                                                echo '<li><a href="'.site_url('category/'.$pc->slug.'/'.$sc->slug).'">'.$sc->name.'</a></li>';
+                                                echo '<li class="sub-category-li"><a class="sub-category-text" href="'.site_url('category/'.$pc->slug.'/'.$sc->slug).'">'.$sc->name.'</a></li>';
                                             }
                                             echo '<li class="divider"></li>';
-                                            echo '<li><a href="'.site_url('category/'.$pc->slug).'">'.lang('all_products').'</a></li>';
+                                            echo '<li class="sub-category-li"><a class="sub-category-text" href="'.site_url('category/'.$pc->slug).'">'.lang('all_products').'</a></li>';
                                             echo '</ul>';
                                         }
                                         echo '</li>';

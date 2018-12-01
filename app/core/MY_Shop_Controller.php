@@ -5,6 +5,24 @@ class MY_Shop_Controller extends CI_Controller {
     function __construct()
     {
         parent::__construct();
+
+        /*if (!isset($_COOKIE['firsttime']))
+        {
+            setcookie("firsttime", rand(), time()+20);
+        }
+
+        //setcookie("firsttime", "", time() - 3600);
+        //unset($_COOKIE['firsttime']);
+
+        echo $_COOKIE['firsttime'];*/
+
+        echo $_SERVER['SERVER_ADDR'] . '<br>';
+        echo $_SERVER['HTTP_USER_AGENT'];
+
+        $shop_status = $this->db->get('subscription')->row()->shop_status;
+        if($shop_status == 0)
+            redirect('verify');
+        
         $this->Settings = $this->site->get_setting();
 
         if(file_exists(APPPATH.'controllers'.DIRECTORY_SEPARATOR.'shop'.DIRECTORY_SEPARATOR.'Shop.php')) {
